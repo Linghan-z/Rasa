@@ -1,0 +1,107 @@
+version: "3.1"
+
+stories:
+
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_answer_greet
+
+- story: say affirm with greet
+  steps:
+  - intent: greet
+  - action: utter_answer_greet
+  - intent: affirm
+  - action: utter_answer_affirm
+
+- story: say affirm
+  steps:
+  - intent: affirm
+  - action: utter_answer_affirm
+
+- story: say no with greet
+  steps: 
+  - intent: greet
+  - action: utter_answer_greet
+  - intent: deny
+  - action: utter_answer_deny
+
+- story: say no
+  steps:
+  - intent: deny
+  - action: utter_answer_deny
+
+- story: say goodbye
+  steps: 
+  - intent: goodbye
+  - action: utter_answer_goodbye
+
+- story: thanks with greet
+  steps:
+  - intent: greet
+  - action: utter_answer_greet
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: thanks
+  steps:
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: who are you with greet
+  steps:
+  - intent: greet
+  - action: utter_answer_greet
+  - intent: who_are_you
+  - action: utter_answer_whoareyou
+  
+- story: who are you
+  steps:
+  - intent: who_are_you
+  - action: utter_answer_whoareyou
+  
+- story: what to do
+  steps:
+  - intent: what_to_do
+  - action: utter_answer_whattodo
+
+- story: what to do with greet
+  steps:
+  - intent: greet
+  - action: utter_answer_greet
+  - intent: what_to_do
+  - action: utter_answer_whattodo
+
+# - story: weather path
+#   steps:
+#   - intent: request_weather
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
