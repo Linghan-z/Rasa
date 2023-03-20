@@ -1,27 +1,30 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+
+from typing import Any, Text, Dict, List
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+from actions.api import question_parser
+from actions.api import answer_search
 
 
-# This is a simple example for a custom action which utters "Hello World!"
+class FindTheCorrespondingMilitary(Action):
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+    def name(self) -> Text:
+        return "find_the_corresponding_military"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        military = tracker.get_slot('Military')
+        intention = tracker.get_intent_of_latest_message()
+        data = {'args': {military: ['Military']}, 'question_type': [intention]}
+        parser = question_parser.QuestionPaser()
+        searcher = answer_search.AnswerSearcher()
+        sql = parser.parser_main(data)
+        final_answer = searcher.search_main(sql)
+
+        # dispatcher.utter_message(text="Hello World!")
+        dispatcher.utter_message(final_answer)
+        return []
