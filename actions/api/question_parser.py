@@ -41,7 +41,7 @@ class QuestionPaser:
         sql_['question_type'] = question_type
         sql = []
         if question_type == 'military_detail':
-            sql = self.sql_transfer(question_type, entity_dict.get('Military'))
+            sql = self.sql_transfer(question_type, entity_dict.get('military'))
 
         if sql:
             sql_['sql'] = sql

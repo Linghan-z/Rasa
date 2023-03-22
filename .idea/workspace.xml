@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39c58c7f-05bb-4419-a6d9-047946b2c393" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/actions/api/answer_search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/api/question_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Rasa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rasa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/api/question_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/api/question_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/nlu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/rules.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
       <updated>1670267384383</updated>
       <workItem from="1670267385566" duration="17788000" />
       <workItem from="1670667289410" duration="29000" />
-      <workItem from="1679315263321" duration="10450000" />
+      <workItem from="1679315263321" duration="23101000" />
     </task>
     <servers />
   </component>

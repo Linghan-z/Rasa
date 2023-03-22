@@ -10,3 +10,5 @@
 models/
 *.dat
 MITIE-mater/
+/models/
+/zh_core_web_md/
